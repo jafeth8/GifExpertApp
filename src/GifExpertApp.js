@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { AddCategory } from './components/AddCategory';
 
 export const GifExpertApp = () => {
     //const categories=['One Punch','Samurai X','Dragon Ball'];
@@ -6,6 +7,7 @@ export const GifExpertApp = () => {
     
     const [categories, setcategories] = useState(['One Punch','Samurai X','Dragon Ball'])
 
+    /*
     const handleAdd=()=>{
         //let nuevoValor=categories.push('Hunter x Hunter');
         //setcategories(nuevoValor)
@@ -15,10 +17,11 @@ export const GifExpertApp = () => {
         //setcategories([...categories,'Hunter x Hunter'])
         setcategories(cats=>[...cats,'Hunter x Hunter'])
     };
-
+    */
     return (
         <>
           <h2>GifExpertApp</h2>
+          <AddCategory setcategories={setcategories}/>
           <hr/>
           <ol>
               {
@@ -27,7 +30,7 @@ export const GifExpertApp = () => {
                 })
               }
           </ol> 
-          <button onClick={handleAdd}>Agregar!</button> 
+          
         </>
     )
 }
