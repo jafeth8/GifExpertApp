@@ -2,12 +2,11 @@ import React, { useState } from 'react'
 import { AddCategory } from './components/AddCategory';
 import { GridGif } from './components/GridGif';
 
-export const GifExpertApp = () => {
+export const GifExpertApp = ({defaultCategories=[]}) => {
     //const categories=['One Punch','Samurai X','Dragon Ball'];
     
-    
-    const [categories, setcategories] = useState(['no game no life'])
-
+    //const [categories, setcategories] = useState(['no game no life'])
+    const [categories, setcategories] = useState(defaultCategories);
     /*
     const handleAdd=()=>{
         //let nuevoValor=categories.push('Hunter x Hunter');
